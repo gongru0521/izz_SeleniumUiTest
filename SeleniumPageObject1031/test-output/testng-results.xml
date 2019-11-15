@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="seleniumuitest" duration-ms="512" started-at="2019-11-15T08:10:10Z" finished-at="2019-11-15T08:10:10Z">
+    <groups>
+    </groups>
+    <test name="seleniumuitest" duration-ms="512" started-at="2019-11-15T08:10:10Z" finished-at="2019-11-15T08:10:10Z">
+      <class name="com.test.demo.LanchTest">
+        <test-method status="PASS" signature="test001()[pri:0, instance:com.test.demo.LanchTest@8df31b]" name="test001" duration-ms="283" started-at="2019-11-15T16:10:10Z" finished-at="2019-11-15T16:10:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test001 -->
+      </class> <!-- com.test.demo.LanchTest -->
+    </test> <!-- seleniumuitest -->
+  </suite> <!-- seleniumuitest -->
+</testng-results>
