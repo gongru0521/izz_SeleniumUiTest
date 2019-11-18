@@ -146,7 +146,7 @@
 	                    <argLine>-Dfile.encoding=UTF-8</argLine>
 	                    <testFailureIgnore>true</testFailureIgnore>
 	                    <suiteXmlFiles>
-	                        <file>testng.xml</file>
+	                        <file>testNG.xml</file>
 	                    </suiteXmlFiles>
 	        </configuration>
 		</plugin>
