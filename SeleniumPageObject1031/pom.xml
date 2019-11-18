@@ -125,44 +125,26 @@
           <version>3.7.1</version>
         </plugin>
         <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        
-        
-        
-        <configuration>
-                    <!-- 解决maven test命令时console出现中文乱码乱码 -->
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <suiteXmlFiles>
-                        <file>testng.xml</file>
-                    </suiteXmlFiles>
-                </configuration>
-</plugin>
-<<<<<<< HEAD
+	          <artifactId>maven-project-info-reports-plugin</artifactId>
+	          <version>3.0.0</version>
+	        
+	        
+	        
+	        <configuration>
+	                    <!-- 解决maven test命令时console出现中文乱码乱码 -->
+	                    <argLine>-Dfile.encoding=UTF-8</argLine>
+	                    <testFailureIgnore>true</testFailureIgnore>
+	                    <suiteXmlFiles>
+	                        <file>testng.xml</file>
+	                    </suiteXmlFiles>
+	        </configuration>
+		</plugin>
 
-=======
- <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.17</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>res/${xmlFileName}</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
- </plugin>
-            
->>>>>>> 42abfb5b3aafb01331feb9d9da84e33eb0eb2a29
  <!-- 添加插件,添加ReportNg的监听器，修改最后的TestNg的报告 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-<<<<<<< HEAD
                 <version>2.22.1</version>
-=======
-                <version>2.4.2</version>
->>>>>>> 42abfb5b3aafb01331feb9d9da84e33eb0eb2a29
                 <configuration>
                     <properties>
                         <property>
