@@ -9,13 +9,13 @@ public class LanchTest {
 	@Test
 	public void test001(){
 		 assertTrue( true );
-		
+		 System.out.println("test001");
 		
 	}
 	@Test
 	public void test002(){
 		 assertTrue( true );
-		
+		 System.out.println("test002");
 		
 	}
 

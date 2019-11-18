@@ -16,6 +16,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    
+    
+    <!-- maven 参数配置，这里引用不同的testng.xml -->
+   
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <xmlFileName>testng.xml</xmlFileName>
+    
   </properties>
 
   <dependencies>
@@ -93,7 +100,7 @@
     
   </dependencies>
 
-  <build>
+   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -110,14 +117,16 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
         </plugin>
-        
-        <!--  
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
-          
+        <!--  
+                      <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
+                        </property>
+           -->
         </plugin>
-        -->
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
@@ -135,90 +144,13 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
-        
-        <!-- 
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.7.1</version>
-            <configuration>
-                <suiteXmlFiles>
-                    <suiteXmlFile>testNG.xml</suiteXmlFile>
-                </suiteXmlFiles>
-            </configuration>
-        </plugin>
-        --> 
-      
         <plugin>
-	         <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.7.1</version>
-	        
-	        
-	        
-	        <configuration>
-	                  
-	                    <argLine>-Dfile.encoding=UTF-8</argLine>
-	                    <testFailureIgnore>true</testFailureIgnore>
-	                    <suiteXmlFiles>
-	                        <file>testNG.xml</file>
-	                    </suiteXmlFiles>
-	        </configuration>
-		</plugin>
-  
- <!-- 添加插件,添加ReportNg的监听器，修改最后的TestNg的报告 -->
- <!-- 
-			 <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.1</version>
-                <configuration>
-                    <forkMode>once</forkMode>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                   
-                
-                 <properties>
-                <property>
-                            <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
-                </property>
-                </properties>
-                </configuration>
-            </plugin>
-  -->
- 
-  
-           <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-             	<version>2.22.1</version>
-             	<configuration>
-			        <skipTests>true</skipTests>
-                    <properties>
-                        <property>
-                            <name>usedefaultlisteners</name>
-                            <value>false</value>
-                        </property>
-                        <property>
-                            <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
-                        </property>
-                    </properties>
-                   
-                </configuration>
-            </plugin>
-        
-      
-        
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
       </plugins>
-      
-      
-      
     </pluginManagement>
-    
-     
-
-
-    
   </build>
+                        
+           
 </project>
