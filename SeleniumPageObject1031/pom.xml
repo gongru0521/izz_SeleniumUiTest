@@ -66,12 +66,12 @@
     
     
     <!-- https://mvnrepository.com/artifact/aspectj/aspectjweaver -->
-<dependency>
-    <groupId>aspectj</groupId>
-    <artifactId>aspectjweaver</artifactId>
-    <version>1.5.4</version>
-    <scope>compile</scope>
-</dependency>
+<dependency>  
+    <groupId>org.aspectj</groupId>  
+     <artifactId>aspectjrt</artifactId>  
+     <version>1.5.4</version>  
+	  <scope>compile</scope>
+ </dependency>  
 
 <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
 <dependency>
@@ -135,6 +135,7 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
+        
         <!-- 
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -146,8 +147,8 @@
                 </suiteXmlFiles>
             </configuration>
         </plugin>
-         -->
-        <!--
+        --> 
+      
         <plugin>
 	          <artifactId>maven-project-info-reports-plugin</artifactId>
 	          <version>3.0.0</version>
@@ -155,7 +156,7 @@
 	        
 	        
 	        <configuration>
-	                     解决maven test命令时console出现中文乱码乱码 
+	                  
 	                    <argLine>-Dfile.encoding=UTF-8</argLine>
 	                    <testFailureIgnore>true</testFailureIgnore>
 	                    <suiteXmlFiles>
@@ -163,7 +164,7 @@
 	                    </suiteXmlFiles>
 	        </configuration>
 		</plugin>
-  -->
+  
  <!-- 添加插件,添加ReportNg的监听器，修改最后的TestNg的报告 -->
  <!-- 
 			 <plugin>
@@ -172,7 +173,6 @@
                 <version>2.22.1</version>
                 <configuration>
                     <forkMode>once</forkMode>
-                    <argLine>-Dfile.encoding=UTF-8 -Xmx1024m -XX:MaxPermSize=256m</argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                    
                 
@@ -203,10 +203,7 @@
                             <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
                         </property>
                     </properties>
-                    <!-- 
-                    <workingDirectory>target/</workingDirectory>
-                     <forkMode>always</forkMode> 
-                      -->
+                   
                 </configuration>
             </plugin>
         

@@ -5,12 +5,11 @@
  
     <test name="seleniumuitest" >
         <packages>
-            <package name="com.test.demo/>
+            <package name="com.test.demo.*"/>
             
         </packages>
-        <classes>
-            <class name="LanchTest">
-            </class>
+        
+        
     </test>
 
 </suite>
