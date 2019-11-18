@@ -12,5 +12,11 @@ public class LanchTest {
 		
 		
 	}
+	@Test
+	public void test002(){
+		 assertTrue( true );
+		
+		
+	}
 
 }
