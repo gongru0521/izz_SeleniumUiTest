@@ -15,6 +15,7 @@ public class LanchTest {
 		
 	}
 	@Test
+	@Feature("test002")
 	public void test002(){
 		 assertTrue( true );
 		 System.out.println("test002");
