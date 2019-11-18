@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="seleniumuitest">
+<suite name="seleniumuitest" parallel="false">
  
-    <test name="seleniumuitest" preserve-order="true" verbose="3">
+    <test name="seleniumuitest" >
         <packages>
-            <package name="com.test.demo.LanchTest />
+            <package name="com.test.demo/>
+            
         </packages>
+        <classes>
+            <class name="LanchTest">
+            </class>
     </test>
 
 </suite>
